@@ -1,0 +1,18 @@
+﻿
+D:\Developer\Alshifa Pallickal mern\src\components\About.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Developer\Alshifa Pallickal mern\src\components\Header.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Developer\Alshifa Pallickal mern\src\components\Hero.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Developer\Alshifa Pallickal mern\src\components\Services.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Developer\Alshifa Pallickal mern\src\components\Testimonials.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Ô£û 5 problems (5 errors, 0 warnings)
+

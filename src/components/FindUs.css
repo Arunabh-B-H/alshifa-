@@ -1,0 +1,590 @@
+/* Find Us Section - Balanced Two Column Layout */
+
+.find-us-section {
+  background-color: var(--surface, #FFFFFF);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #E2E8F0;
+}
+
+.find-us-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .find-us-container {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4.5rem;
+  }
+}
+
+/* ==========================================================
+   Left Column: Hospital Info & Quick Actions
+   ========================================================== */
+.find-us-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(0, 180, 216, 0.1);
+  color: #0077B6;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+  border: 1px solid rgba(0, 180, 216, 0.25);
+}
+
+.tagline-icon {
+  color: #00B4D8;
+}
+
+.find-us-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary, #0A2540);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.text-highlight {
+  color: var(--secondary, #00B4D8);
+}
+
+.find-us-desc {
+  font-size: 1rem;
+  color: var(--text-muted, #64748B);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+/* Address Card */
+.address-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.address-card:hover {
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 4px 14px rgba(10, 37, 64, 0.05);
+}
+
+.address-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.12);
+  color: #0077B6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.address-pin-icon {
+  color: #0077B6;
+}
+
+.address-text-group {
+  flex: 1;
+}
+
+.address-heading {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 2px;
+  font-family: var(--font-heading, sans-serif);
+}
+
+.address-body {
+  font-size: 0.8125rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+
+.copy-btn .text-emerald {
+  color: #10B981;
+}
+
+/* Hours Grid */
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.hours-item {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hours-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.hours-value {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-247 {
+  color: #059669;
+}
+
+.live-dot-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseLive 2s infinite;
+}
+
+/* Find Us Action Buttons */
+.find-us-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.find-us-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-whatsapp-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp-action:hover {
+  background: #20BA57;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.wa-svg {
+  flex-shrink: 0;
+}
+
+/* Facilities Row */
+.facilities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.facility-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #E2E8F0;
+}
+
+.facility-icon {
+  color: #0077B6;
+}
+
+/* ==========================================================
+   Right Column: Compact Google Map Animation Card
+   ========================================================== */
+.find-us-right {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.map-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 40px -10px rgba(10, 37, 64, 0.12), 0 0 0 1px rgba(10, 37, 64, 0.04);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.map-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(10, 37, 64, 0.18);
+  border-color: rgba(0, 180, 216, 0.4);
+}
+
+/* Map Header */
+.map-card-header {
+  padding: 12px 18px;
+  background: #ffffff;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.map-live-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #EF4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+  animation: pulseLive 2s infinite;
+}
+
+.live-badge-text {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0F172A;
+  font-family: var(--font-heading, sans-serif);
+}
+
+.map-coords-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: #F1F5F9;
+  color: #64748B;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+}
+
+/* Map Embed Container */
+.map-embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: #E2E8F0;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: contrast(102%) saturate(105%);
+}
+
+/* Animated Radar Pin on Map */
+.map-animated-radar-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-ping-ring {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.3);
+  animation: mapPing 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.radar-pin-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #EF4444;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.8), 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffffff;
+  animation: floatPin 3s ease-in-out infinite;
+}
+
+.radar-pin-symbol {
+  color: #ffffff;
+}
+
+/* Floating Bottom Action Overlay */
+.map-action-overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(10, 37, 64, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+}
+
+.overlay-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-heading, sans-serif);
+}
+
+.overlay-sub {
+  font-size: 0.6875rem;
+  color: #94A3B8;
+}
+
+.btn-get-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--secondary, #00B4D8);
+  color: #ffffff;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+  white-space: nowrap;
+}
+
+.btn-get-directions:hover {
+  background: #0096B4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 180, 216, 0.5);
+}
+
+.nav-arrow-icon {
+  color: #ffffff;
+}
+
+.ext-icon {
+  opacity: 0.85;
+}
+
+/* Map Card Footer Bar */
+.map-card-footer {
+  padding: 10px 18px;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.footer-tip {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #0077B6;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #0A2540;
+}
+
+/* Animations */
+@keyframes pulseLive {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes mapPing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes floatPin {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .find-us-title {
+    font-size: 2rem;
+  }
+
+  .hours-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .address-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .copy-btn {
+    align-self: flex-start;
+  }
+
+  .map-embed-wrapper {
+    height: 300px;
+  }
+
+  .map-action-overlay {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 8px 12px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .btn-get-directions {
+    justify-content: center;
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .find-us-title {
+    font-size: 1.75rem;
+  }
+
+  .find-us-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .find-us-btn,
+  .btn-whatsapp-action {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.25rem;
+  }
+
+  .map-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 14px;
+  }
+}

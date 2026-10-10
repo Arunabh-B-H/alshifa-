@@ -1,0 +1,116 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .service-card {
+    padding: 1.75rem 1.5rem;
+  }
+  .services-grid {
+    gap: 1.25rem;
+  }
+  .icon-wrapper {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1.25rem;
+  }
+  .service-title {
+    font-size: 1.15rem;
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(0, 180, 216, 0.1);
+}
+
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Icon Colors using utility approach */
+.bg-blue-50 { background-color: #eff6ff; }
+.text-blue-600 { color: #2563eb; }
+.bg-teal-50 { background-color: #f0fdfa; }
+.text-teal-600 { color: #0d9488; }
+.bg-indigo-50 { background-color: #eef2ff; }
+.text-indigo-600 { color: #4f46e5; }
+.bg-rose-50 { background-color: #fff1f2; }
+.text-rose-600 { color: #e11d48; }
+.bg-orange-50 { background-color: #fff7ed; }
+.text-orange-600 { color: #ea580c; }
+.bg-purple-50 { background-color: #faf5ff; }
+.text-purple-600 { color: #9333ea; }
+
+.service-title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.service-desc {
+  color: var(--text-muted);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+.link-icon {
+  transition: transform 0.3s ease;
+}
+
+.service-link:hover .link-icon {
+  transform: translateX(4px);
+  color: var(--secondary);
+}
+.service-link:hover {
+  color: var(--secondary);
+}

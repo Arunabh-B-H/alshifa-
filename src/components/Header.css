@@ -1,0 +1,190 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+  padding: 1.25rem 0;
+  background-color: transparent;
+}
+
+.header.scrolled {
+  padding: 0.75rem 0;
+  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.logo-accent {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .desktop-nav {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-main);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.compact-btn {
+  padding: 0.6rem 1.15rem;
+  font-size: 0.875rem;
+}
+
+.mobile-menu-btn {
+  display: flex;
+  color: var(--primary);
+  padding: 0.4rem;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav-list {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--primary);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* Mobile Screens Optimization (iPhone 16, etc.) */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .logo-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo-accent {
+    display: none; /* Keep just 'Al Shifa' for clean breathing room */
+  }
+
+  .header-call-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    min-width: 38px;
+  }
+
+  .header-call-btn .btn-text {
+    display: none; /* Icon-only circular call button on small phones */
+  }
+
+  .mobile-menu-btn {
+    padding: 6px;
+  }
+}
