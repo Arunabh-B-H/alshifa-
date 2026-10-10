@@ -737,6 +737,22 @@
     width: 54px;
     height: 54px;
   }
+
+  /* Prevent iOS Safari 16px auto-zoom */
+  .chatbot-input {
+    font-size: 16px !important;
+  }
+
+  .quick-option-pill {
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 0.8125rem;
+  }
+
+  .whatsapp-send-btn {
+    min-height: 46px;
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 420px) {
@@ -766,5 +782,14 @@
   .message-bubble {
     font-size: 0.8125rem;
     padding: 8px 12px;
+  }
+
+  .chatbot-header {
+    padding: 12px 14px;
+  }
+
+  .header-btn {
+    width: 34px;
+    height: 34px;
   }
 }

@@ -181,6 +181,145 @@
   font-weight: 500;
 }
 
+/* Authentic Signboard Photo Trigger Button */
+.board-view-photo-btn {
+  margin-top: 0.875rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.board-view-photo-btn:hover {
+  background: #F0F9FF;
+  border-color: #00B4D8;
+  color: #0077B6;
+  transform: translateY(-1px);
+}
+
+.board-thumb-mini {
+  width: 28px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid #94A3B8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.thumb-arrow-icon {
+  color: #64748B;
+  transition: transform 0.2s ease;
+}
+
+.board-view-photo-btn:hover .thumb-arrow-icon {
+  transform: translateX(2px);
+  color: #0077B6;
+}
+
+/* ==========================================================
+   Signboard Lightbox Modal
+   ========================================================== */
+.board-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.board-modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(10, 37, 64, 0.35);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.board-modal-header {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E2E8F0;
+  background: #ffffff;
+}
+
+.modal-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-title-wrap h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0A2540;
+  margin: 0;
+}
+
+.modal-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+.board-modal-image-wrap {
+  background: #F8FAFC;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.board-modal-footer {
+  padding: 10px 18px;
+  background: #F1F5F9;
+  border-top: 1px solid #E2E8F0;
+  text-align: center;
+}
+
+.board-modal-footer p {
+  font-size: 0.75rem;
+  color: #64748B;
+  margin: 0;
+  font-weight: 500;
+}
+
 /* ==========================================================
    Right Column: Philosophy & Clinical Background
    ========================================================== */
@@ -339,40 +478,57 @@
   color: #0A2540;
 }
 
-/* Mobile Screens Optimization (iPhone 16) */
+/* ==========================================================
+   Mobile Screens Optimization (iPhone 16, etc.)
+   ========================================================== */
 @media (max-width: 768px) {
   .founder-section {
     padding: 3.5rem 0;
   }
 
   .founder-header {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
   }
 
   .founder-grid {
-    gap: 2.5rem;
+    gap: 2.25rem;
   }
 
   .founder-portrait-card {
     padding: 1rem;
     border-radius: 20px;
+    max-width: 400px;
   }
 
   .board-doctor-name {
-    font-size: 1.2rem;
+    font-size: clamp(1.15rem, 5vw, 1.35rem);
   }
 
   .founder-quote-box {
-    padding: 1.25rem 1.25rem;
-    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
   .quote-text {
     font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .clinical-highlights-list {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .highlight-title {
+    font-size: 0.9375rem;
+  }
+
+  .highlight-desc {
+    font-size: 0.8125rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .founder-cta-group {
     flex-direction: column;
     width: 100%;
@@ -384,5 +540,19 @@
   .btn-call-founder {
     width: 100%;
     justify-content: center;
+    min-height: 46px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 380px) {
+  .founder-portrait-card {
+    padding: 0.85rem;
+  }
+  .designation-board {
+    padding: 1rem 0.85rem;
+  }
+  .role-pill {
+    font-size: 0.72rem;
   }
 }

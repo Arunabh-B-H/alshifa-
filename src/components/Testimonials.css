@@ -339,6 +339,7 @@
 
 .author-badge-text {
   color: #64748B;
+  word-break: break-word;
 }
 
 /* Mobile Responsiveness */
@@ -346,7 +347,7 @@
   .google-banner-inner {
     flex-direction: column;
     align-items: stretch;
-    padding: 1.25rem 1rem;
+    padding: 1.15rem 1rem;
     gap: 1rem;
   }
 
@@ -360,13 +361,15 @@
   }
 
   .score-big {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 
   .btn-google-maps-review {
     width: 100%;
     justify-content: center;
-    padding: 10px 14px;
+    padding: 11px 14px;
+    min-height: 44px;
+    box-sizing: border-box;
   }
 
   .google-reviews-grid {
@@ -375,7 +378,7 @@
 
   .google-review-card {
     padding: 1.25rem 1rem;
-    border-radius: 14px;
+    border-radius: 16px;
   }
 
   .google-review-text {
@@ -392,5 +395,24 @@
 
   .author-meta-line {
     font-size: 0.6875rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .score-big {
+    font-size: 1.55rem;
+  }
+  .score-number-row {
+    gap: 8px;
+  }
+  .stars-row svg {
+    width: 15px;
+    height: 15px;
+  }
+  .score-subtext {
+    font-size: 0.72rem;
+  }
+  .google-review-card {
+    padding: 1rem 0.85rem;
   }
 }

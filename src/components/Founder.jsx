@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Stethoscope,
   ShieldCheck,
@@ -9,11 +9,15 @@ import {
   Quote,
   CheckCircle2,
   Sparkles,
-  HeartPulse
+  HeartPulse,
+  ExternalLink,
+  X
 } from 'lucide-react';
 import './Founder.css';
 
 export default function Founder() {
+  const [showBoardModal, setShowBoardModal] = useState(false);
+
   const clinicalHighlights = [
     {
       title: "Comprehensive Family Healthcare",
@@ -105,6 +109,22 @@ export default function Founder() {
                   <span className="board-institution">AL SHIFA MEDICAL CENTER</span>
                   <span className="board-location">Pallickal, Kerala</span>
                 </div>
+
+                {/* View Original Clinic Board Photo Button */}
+                <button
+                  type="button"
+                  onClick={() => setShowBoardModal(true)}
+                  className="board-view-photo-btn"
+                  aria-label="View official clinic designation board"
+                >
+                  <img
+                    src="/images/dr_kanza_beegum_designation.png"
+                    alt="Official Designation Signboard"
+                    className="board-thumb-mini"
+                  />
+                  <span>View Official Clinic Signboard</span>
+                  <ExternalLink size={13} className="thumb-arrow-icon" />
+                </button>
               </div>
             </div>
           </motion.div>
@@ -183,6 +203,53 @@ export default function Founder() {
 
         </div>
       </div>
+
+      {/* Official Signboard Lightbox Modal */}
+      <AnimatePresence>
+        {showBoardModal && (
+          <motion.div
+            className="board-modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowBoardModal(false)}
+          >
+            <motion.div
+              className="board-modal-card"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="board-modal-header">
+                <div className="modal-title-wrap">
+                  <ShieldCheck size={18} className="text-secondary" />
+                  <h4>Official Clinic Signboard</h4>
+                </div>
+                <button
+                  onClick={() => setShowBoardModal(false)}
+                  className="modal-close-btn"
+                  aria-label="Close modal"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <div className="board-modal-image-wrap">
+                <img
+                  src="/images/dr_kanza_beegum_designation.png"
+                  alt="Dr. Kanza Beegum - Family Physician, Managing Director, Al Shifa Medical Center"
+                  className="board-modal-img"
+                />
+              </div>
+
+              <div className="board-modal-footer">
+                <p>Verified Designation Board • Al Shifa Medical Center, Pallickal</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
